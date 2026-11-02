@@ -124,7 +124,7 @@ chmod g+s ${NVM_DIR}
 su ${USERNAME} -c "$(cat << EOF
     set -e
     umask 0002
-    # Do not update profile - we'll do this manually
+    # Do not update profile - this is handled manually
     export PROFILE=/dev/null
     ls -lah /home/${USERNAME}/.nvs || :
     curl -so- https://raw.githubusercontent.com/nvm-sh/nvm/v${NVM_VERSION}/install.sh | bash 
